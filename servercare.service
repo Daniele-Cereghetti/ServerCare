@@ -1,0 +1,14 @@
+[Unit]
+Description = ServerCare
+
+[Service]
+Type           = simple
+User           = root
+Group          = root
+Restart        = always
+RestartSec     = 5s
+WorkingDirectory = /yourPath
+ExecStart      = /usr/bin/python3 /yourPath/server_care.py
+
+[Install]
+WantedBy = multi-user.target
